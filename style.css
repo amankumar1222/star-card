@@ -16,8 +16,9 @@ body{
 }
 .container{
     /* border: 2px solid #fff; */
- width: 80vw;
- height: 50vh;
+ width:  1050px;
+ height:450px;
+ margin: 100px auto;
 }
 .insights , .startImg{
     height: 100%;
@@ -47,23 +48,32 @@ padding-bottom: 10px;
 
 }
 
-.row{
+.stats-preview_stats{
     text-transform: uppercase;
 padding-bottom: 10px;
 
+
 }
-.row h4{
+.stats-preview_stats li{
+    display: flex;
+    flex-direction: column;
+}
+.stat-number{
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: 700;
     margin-bottom: 10px;
+
 }
-.row p{
+.stats-preview_stats p{
     color: hsla(0, 0%, 100%, 0.75);
 }
+.stat-name{
+    font-size: 16px;
+    font-weight: normal;
+    color: hsla(0, 0%, 100%, 0.75);
 
-
-
+}
 
 .startImg img{
     width: 100%;
@@ -73,7 +83,6 @@ padding-bottom: 10px;
 .startImg {
     position: relative;
     border-radius: 0px 10px 10px 0px;
-    background: url('/images/image-header-desktop.jpg');
 
 }
 .startImg::before{
@@ -83,29 +92,24 @@ padding-bottom: 10px;
     background-color: hsla(277, 64%, 61%, 0.592);
     position: absolute;
 
-   
+   top: 0;
+   left: 0;
     border-radius: 0px 10px 10px 0px;
 
    
 }
 
 
-@media only screen and (max-width: 1050px) {
 
-    .container{
-        width: 85vw;
-        height: 60vh;
-
-    }
-  }
 @media only screen and (max-width: 800px) {
     
     .container{
-        width: 85vw;
-        height: 80vh;
+        width: 375px;
+        height: 900px;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        margin: 50px auto;
     }
     .insights , .startImg{
         width: 100%;
@@ -115,54 +119,33 @@ padding-bottom: 10px;
 
     .insights{
         border-radius: 0px 0px 10px 10px;
-        height: 65vh;
-        padding-top: 20px;
+        /* height: 65vh; */
+        /* padding-top: 10px; */
+        text-align: center;
+        
+    }
+    .around{
+        justify-content: space-evenly;
     }
 
    .startImg , .startImg img, .startImg::before{
     border-radius: 10px 10px 0px 0px;
-    height: 31vh;
+    height: 40vh;
    }
-  }
+   .stats-preview_stats{
+    flex-direction: column;
+   }
+   .stats-preview_stats li{
+    margin: 15px 0px;
 
-
-
-  @media only screen and (max-width: 500px) { 
-
-    .container{
-        width: 95vw;
-        height: 95vh;  
-    }
-    .startImg{
-        background: url('/images/image-header-mobile.jpg')no-repeat center/cover;
-
-    }
-    .insights{
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        padding: 2% 3% 2% 3%;
-        padding-top: 35px;
-    }
-    .heading{
-        font-size: 30px;
-        padding-top: 20px;
-    }
-    .para{
-        /* font-size: 1px; */
-    }
-    .row{
-        flex-direction: column;
-        margin: 10px 0px;
-    }
-    .row div{
-        margin: 10px 0px;
-    }
+   }
 
   }
 
-  .attribution{
-    position: absolute;
+
+
+
+  footer{
+    position: fixed;
     bottom: 10px;
-    text-decoration: none;
   }
